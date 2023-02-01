@@ -8,7 +8,7 @@ body {
 header {
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
+    flex-direction: column; 
     align-items: space-around;
     background-color: aquamarine;
     height: 100vh;
@@ -18,6 +18,8 @@ header {
     width:100px;
     height:100px;
     overflow:hidden;
+    margin: 0 auto;
+    margin-top: 5px;
 }
     
 .logo img { 
