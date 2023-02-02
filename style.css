@@ -5,6 +5,18 @@
   text-decoration: none;
 }
 
+/* body {
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+} */
+
+html {
+  scroll-behavior: smooth;
+  /* scroll-padding: 25rem; */
+  scroll-padding: var(--scroll-padding, 18rem);
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -15,9 +27,29 @@
     "footer";
 }
 
+.logo-container {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 73%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.logo {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
 header {
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -26,13 +58,10 @@ header {
   background-color: aquamarine;
   grid-area: header;
   gap: 5rem;
-}
-
-.logo {
-  display: block;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
+  position: relative;
+  top: 30vh;
+  /* position: relative;
+  z-index: 66; */
 }
 
 nav ul {
@@ -58,10 +87,18 @@ nav ul li {
 
 main {
   grid-area: main;
+  /* background-color: #fff; */
 }
 
-#home {
-  background: yellow;
+/*/////////////////////*/
+/*   GENERAL STYLING   */
+/*/////////////////////*/
+
+section {
+  z-index: 2;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  background-color: yellow;
 }
 
 .container {
@@ -72,8 +109,6 @@ main {
   display: grid;
   grid-template-rows: 50% 50%;
   gap: 0px;
-  /* justify-items: center;
-  align-items: center; */
   outline: 2px solid red;
   padding: 1rem;
 }
@@ -85,8 +120,6 @@ main {
   outline: 2px solid red;
 }
 
-/*ABOUT*/
-
 .subtitle {
   font-size: 2rem;
   margin-top: 2rem;
@@ -94,18 +127,17 @@ main {
   text-align: center;
 }
 
-/* #about {
-  display: flex;
-  border: 2px solid black;
-} */
+/*/////////////////////*/
+/*    LANDING PAGE     */
+/*/////////////////////*/
 
-.about-container {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "left" "right";
-  background-color: aquamarine;
+#home {
+  margin-top: 80rem;
 }
+
+/*/////////////////////*/
+/*        ABOUT        */
+/*/////////////////////*/
 
 .right p {
   font-size: 1.5rem;
@@ -113,51 +145,89 @@ main {
   line-height: 1.5;
   margin-bottom: 2rem;
 }
-
 .left {
   overflow: hidden;
 }
 .left img {
   width: 100%;
   height: auto;
+  margin-bottom: 2rem;
 }
 
-/* COLLECTION */
+/*//////////////////////*/
+/*      COLLECTION      */
+/*//////////////////////*/
 
-/* CONTACT*/
+.gallery {
+  display: grid;
+  grid-auto-rows: minmax(10rem, 20%);
+  gap: 2rem;
+  outline: 2px solid blue;
+  height: fit-content;
+}
 
-.contact {
-  background-color: aquamarine;
-  border: 2px solid black;
-  height: 100vh;
+.card {
+  display: grid;
+  grid-template-rows: 80% 8%;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card p {
+  line-height: 2;
+  font-size: 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
 }
+
+/*///////////////////*/
+/*      CONTACT      */
+/*///////////////////*/
 
 form {
-  margin-top: 50px;
   text-align: center;
-  align-items: center;
+  margin: auto;
+  width: 90%;
+  outline: 2px solid blue;
 }
 
-input {
+.form-entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+label {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+  width: 100%;
   border-radius: 5px;
+  height: 2.5rem;
   background-color: navy;
   color: aliceblue;
+  resize: vertical;
 }
 
 textarea {
-  background-color: navy;
+  height: 6rem;
 }
 
 input:hover {
-  border: 2px solid red;
-}
-
-.contact h2 {
-  text-align: center;
-  font-size: 5rem;
+  outline: 2px solid green;
 }
 
 button {
@@ -173,6 +243,7 @@ button {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  margin-bottom: 2rem;
 }
 
 button:after {
@@ -202,26 +273,36 @@ button:hover {
   color: #fff;
 }
 
+/*///////////////////*/
+/*      FOOTER       */
+/*///////////////////*/
+
 footer {
   grid-area: footer;
   display: flex;
-  height: 10rem;
-
+  justify-content: space-between;
+  align-items: center;
   background-color: aquamarine;
+  padding: 2rem;
 }
-
 .contact-info {
-  margin-top: 2.5rem;
-  margin-left: 7%;
+  line-height: 1.5;
 }
 
 .icons {
-  color: black;
-  font-size: 40px;
-  margin-right: 5%;
-  margin-left: 20%;
-  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
 }
+
+.icons i {
+  color: black;
+  font-size: 2rem;
+}
+
+/*///////////////////*/
+/*   MEDIA QUERIES    */
+/*///////////////////*/
 
 @media screen and (min-width: 620px) {
   .grid-container {
