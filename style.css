@@ -58,6 +58,36 @@ main {
   grid-area: main;
 }
 
+/* #about {
+  display: flex;
+  border: 2px solid black;
+} */
+
+.about-container {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left" "right";
+  background-color: aquamarine;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
+.right p {
+  font-size: 10px;
+}
+
+.left {
+  display: flex;
+  justify-content: end;
+}
+.left img {
+  object-fit: cover;
+  width: 100%;
+}
+
 footer {
   grid-area: footer;
   display: flex;
