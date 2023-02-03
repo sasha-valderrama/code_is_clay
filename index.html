@@ -13,13 +13,16 @@
   </head>
   <body>
     <div class="grid-container">
-      <header>
-        <div class="logo">
-          <img
+      <div class="logo-container">
+        <a href="#header"
+          ><img
+            class="logo"
             src="./img/testimage/earl-wilcox-gtBoWrb6pO0-unsplash.jpg"
             alt="logo"
-          />
-        </div>
+        /></a>
+      </div>
+
+      <header id="header" class="primary-navigation">
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
@@ -28,13 +31,16 @@
           </ul>
         </nav>
       </header>
+
       <main>
-        <section id="home" class="home">
-          <div class="container"><h1 class="slogan">slogan of slogans</h1></div>
+        <section id="home">
+          <div class="container">
+            <h1 class="slogan">slogan of slogans</h1>
+          </div>
         </section>
 
-        <section id="about" class="about">
-          <div class="about-container">
+        <section id="about">
+          <div class="container">
             <div class="right">
               <h2 class="subtitle">About</h2>
               <p>
@@ -48,8 +54,7 @@
           </div>
         </section>
 
-        <section id="collection" class="collection">
-          <div class="cgit ontainer">
+        <section id="collection">
           <div class="container">
             <div class="right">
               <h2 class="subtitle">Collection</h2>
@@ -60,25 +65,27 @@
               </p>
             </div>
             <div class="left">
-              <div class="image">
-                <img src="" alt="img1" />
+              <div class="gallery">
+                <div class="card">
+                <img src="./img/actualimages/IMG-8384.jpg" alt="img1" />
                 <p>Lorem ipsum dolor sit amet</p>
               </div>
 
-              <div class="image">
-                <img src="" alt="img2" />
+              <div class="card">
+                <img src="./img/actualimages/IMG-8393.jpg" alt="img2" />
                 <p>Lorem ipsum dolor sit amet</p>
               </div>
 
-              <div class="image">
-                <img src="" alt="img3" />
+              <div class="card">
+                <img src="./img/actualimages/IMG-8443.jpg" alt="img3" />
                 <p>Lorem ipsum dolor sit amet</p>
               </div>
             </div>
           </div>
         </section>
-        <section id="contact" class="contact">
-          <div class="container-contact">
+
+        <section id="contact">
+          <div class="container">
             <div class="right">
               <h2 class="subtitle">Contact</h2>
               <p>
@@ -87,18 +94,25 @@
             </div>
             <div class="left">
               <form action="" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder:  /><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" /><br><br>
-                <label for="message">Message</label><br>
-                <textarea rows="4" id="message" name="message"></textarea><br>
+                <div class="form-entry">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" />
+                </div>
+                <div class="form-entry">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" />
+                </div>
+                <div class="form-entry">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message"></textarea>
+                </div>
                 <button>Submit</button>
               </form>
             </div>
           </div>
         </section>
       </main>
+
       <footer>
         <div class="contact-info">
           <p>Codey's Clay</p>
