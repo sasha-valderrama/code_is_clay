@@ -122,7 +122,7 @@ section {
   display: grid;
   /* grid-template-rows: 10rem 1fr; */
   gap: 1rem;
-  padding: 1rem;
+  padding: 2.5rem;
   overflow: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -155,7 +155,6 @@ section {
 
 .btn {
   font-family: Nunito;
-  font-weight: 0;
   font-size: 14px;
   color: orange;
   font-weight: bold;
@@ -166,7 +165,7 @@ section {
   box-shadow: rgba(255, 255, 255, 0.5) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.5) 0px 2px 16px 0px;
   border-radius: 50px 49px 39px 50px;
-  transition: 1444ms;
+  transition: 730ms ease-out;
   transform: translateY(0);
   display: flex;
   flex-direction: row;
@@ -175,7 +174,7 @@ section {
 }
 
 .btn:hover {
-  transition: 1444ms;
+  /* transition: 1444ms; */
   padding: 10px 56px;
   transform: translateY(-0px);
   background-color: rgba(128, 0, 0, 0.8295693277310925);
@@ -196,9 +195,12 @@ section {
   overflow: hidden;
 }
 .left img {
-  width: 100%;
+  display: block;
+  margin: auto;
+  width: 90%;
   height: auto;
   margin-bottom: 2rem;
+  border-radius: 15px;
 }
 
 /*//////////////////////*/
@@ -210,27 +212,41 @@ section {
 }
 
 .gallery {
-  display: grid;
-  grid-auto-rows: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 90%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .card {
-  display: grid;
-  grid-auto-rows: 70% 10%;
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  max-height: 16rem;
+  overflow: hidden;
 }
 
 .card img {
   width: 100%;
-  max-height: 20rem;
+  height: auto;
+  margin-bottom: 0px;
   object-fit: cover;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
 }
 
 .card p {
+  margin-top: 0;
   font-size: 1rem;
-  padding: 4.6%;
+  padding: 3%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.25);
   color: white;
+  border-radius: 0 0 15px 15px;
 }
 
 /*///////////////////*/
@@ -281,7 +297,8 @@ button {
   margin-top: 10px;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
-  color: #fff;
+  color: orange;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.15rem;
@@ -328,7 +345,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*  background-color: aquamarine; */
   padding: 2rem;
 }
 .contact-info {
@@ -348,6 +364,10 @@ footer {
 
 /*///////////////////*/
 /*   MEDIA QUERIES    */
+/*///////////////////*/
+
+/*///////////////////*/
+/*   TABLET         */
 /*///////////////////*/
 
 @media screen and (min-width: 620px) {
@@ -383,7 +403,8 @@ footer {
   nav ul {
     flex-direction: row;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 2rem;
+    margin-right: 1rem;
   }
 
   nav ul li {
@@ -392,24 +413,30 @@ footer {
   }
 
   main {
-    grid-area: main;
     position: static;
     top: 5rem;
   }
 }
 
+/*///////////////////*/
+/*      DESKTOP      */
+/*///////////////////*/
+
 @media screen and (min-width: 1024px) {
-  .grid-container {
-    grid-template-rows: 10rem 1fr 10rem;
+  header {
+    padding-right: 12rem;
   }
 
+  .grid-container {
+    grid-template-rows: 10rem 1fr 10rem;
+    padding: 10rem;
+  }
   .container {
     display: grid;
     grid-template-columns: 50% 50%;
-    /* grid-template-areas: "right" "left"; */
-    /*  background-color: aquamarine; */
     padding: 3rem;
-    height: 80vh;
+    height: auto;
+    overflow: hidden;
   }
   .right {
     grid-column: 2/3;
@@ -421,21 +448,34 @@ footer {
   }
 
   .subtitle {
-    font-size: 3rem;
-  }
-
-  .right p {
     font-size: 2rem;
   }
 
-  .left img {
-    width: 100%;
+  .right p {
+    font-size: 1.5rem;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #about .left img {
+    width: 80%;
     height: auto;
   }
 
+  .card {
+    display: flex;
+    flex-direction: column;
+    max-height: 13.5rem;
+    overflow: hidden;
+  }
+
   #home {
-    height: 100vh;
-    /*  background-color: blue; */
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
