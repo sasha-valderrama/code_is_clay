@@ -14,7 +14,7 @@ body {
     rgba(128, 0, 0, 0.8295693277310925) 0%,
     rgba(34, 193, 195, 0.577468487394958) 100%
   );
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Neucha", cursive;
 }
 
 html {
@@ -54,7 +54,7 @@ html {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-  box-shadow: 0.05rem 0.05rem 1rem 0.2rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0.1rem 0.1rem 5rem 3rem rgba(0, 102, 204, 0.25);
 }
 
 header {
@@ -101,7 +101,6 @@ main {
 section {
   margin-bottom: 5rem;
   margin-top: 5rem;
-  /*  background-color: yellow; */
 }
 
 .container {
@@ -110,7 +109,6 @@ section {
   background-color: orange;
   margin: auto;
   display: grid;
-  /* grid-template-rows: 10rem 1fr; */
   gap: 1rem;
   padding: 2rem;
   overflow: auto;
@@ -118,11 +116,20 @@ section {
   border-radius: 10px;
 }
 
-.container h1 {
-  font-size: 1.5rem;
-  text-align: center;
-  grid-row-start: 2;
+.container--narrow {
+  margin: auto;
+  width: 90%;
+  height: auto;
 }
+.container--narrow img {
+  width: 100%;
+  height: auto;
+}
+
+/* .container h1 {
+  font-size: 2rem;
+  text-align: center;
+} */
 
 .subtitle {
   font-size: 3rem;
@@ -132,13 +139,28 @@ section {
   font-family: "Splash", cursive;
 }
 
+.subtitle:hover {
+  color: rgba(128, 0, 0, 1);
+}
+
+p:hover,
+label:hover {
+  color: #0066cc;
+}
+
+p::first-letter {
+  margin-left: 2rem;
+}
+
+button {
+  font-family: "Neucha", cursive;
+}
 /*/////////////////////*/
 /*   STYLING BUTTON   */
 /*/////////////////////*/
 
 .btn {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 14px;
+  font-size: 1.2rem;
   color: orange;
   font-weight: bold;
   letter-spacing: 2px;
@@ -176,6 +198,7 @@ section {
 .left {
   overflow: hidden;
 }
+
 .left img {
   display: block;
   margin: auto;
@@ -231,6 +254,11 @@ section {
   border-radius: 0 0 15px 15px;
 }
 
+.card p:hover {
+  background-color: #0066cc;
+  color: orange;
+}
+
 /*///////////////////*/
 /*      CONTACT      */
 /*///////////////////*/
@@ -250,7 +278,7 @@ form {
 }
 
 label {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   align-self: flex-start;
   margin-bottom: 0.5rem;
 }
@@ -272,50 +300,6 @@ textarea {
 
 input:hover {
   outline: 2px solid green;
-}
-
-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10rem;
-  color: orange;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.15rem;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  margin-bottom: 2rem;
-}
-
-button:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0066cc;
-  border-radius: 10rem;
-  z-index: -2;
-}
-button:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #0066cc;
-  transition: all 0.3s;
-  border-radius: 10rem;
-  z-index: -1;
-}
-button:hover {
-  color: #fff;
 }
 
 /*///////////////////*/
@@ -342,6 +326,11 @@ footer {
 .icons i {
   color: black;
   font-size: 2rem;
+}
+
+.icons i:hover,
+footer p:hover {
+  color: orange;
 }
 
 /*///////////////////*/
@@ -398,8 +387,17 @@ footer {
     position: static;
     top: 5rem;
   }
-}
+  
+  .container--narrow {
+    margin:auto;
+    width: 50%;
+    height: auto;
+  }
 
+  #home {
+    margin-top: 7rem;
+  }
+}
 /*///////////////////*/
 /*      DESKTOP      */
 /*///////////////////*/
@@ -430,7 +428,7 @@ footer {
   }
 
   .subtitle {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   .right p {
@@ -442,6 +440,29 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  .logo {
+    width: 11rem;
+    height: 11rem;
+    margin-left: 3rem;
+  }
+
+  .container-home {
+    width: 90%;
+    height: auto;
+    display: block;
+    padding: 2rem;
+  }
+
+  .container--narrow {
+    margin-left: 0;
+    width: 50%;
+    height: auto;
+  }
+  .container--narrow img {
+    width: 100%;
+    height: auto;
   }
 
   #about .left img {
@@ -457,10 +478,12 @@ footer {
   }
 
   #home {
-    /* height: 100vh; */
+    margin-top: 0;
+  }
+
+  #home .right {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
   }
 }
