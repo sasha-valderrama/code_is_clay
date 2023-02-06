@@ -378,8 +378,10 @@ footer p:hover {
     top: 5rem;
   }
 
-  #home {margin-top: 7rem;}
-
+  #home {
+    margin-top: 7rem;
+  }
+}
 /*///////////////////*/
 /*      DESKTOP      */
 /*///////////////////*/
