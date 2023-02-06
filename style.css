@@ -94,6 +94,10 @@ main {
   top: 5rem;
 }
 
+.logo-desktop {
+  display: none;
+}
+
 /*/////////////////////*/
 /*   GENERAL STYLING   */
 /*/////////////////////*/
@@ -387,15 +391,22 @@ footer p:hover {
     position: static;
     top: 5rem;
   }
-  
+
   .container--narrow {
-    margin:auto;
+    margin: auto;
     width: 50%;
     height: auto;
   }
 
   #home {
     margin-top: 7rem;
+  }
+  .logo-link {
+    display: none;
+  }
+
+  .logo-desktop {
+    display: inline;
   }
 }
 /*///////////////////*/
