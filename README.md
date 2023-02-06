@@ -5,7 +5,7 @@ First project from the DCI from Mads, Ricky and Sasha.
 
 ### Drawing 
 
-![first sketch](img/Sketch1(1).jpg/)
+![first sketch](./img/Sketch1(1).jpg/)
 
 ### Figma
 
