@@ -116,10 +116,20 @@ section {
   border-radius: 10px;
 }
 
-.container h1 {
+.container--narrow {
+  margin: auto;
+  width: 90%;
+  height: auto;
+}
+.container--narrow img {
+  width: 100%;
+  height: auto;
+}
+
+/* .container h1 {
   font-size: 2rem;
   text-align: center;
-}
+} */
 
 .subtitle {
   font-size: 3rem;
@@ -377,6 +387,12 @@ footer p:hover {
     position: static;
     top: 5rem;
   }
+  
+  .container--narrow {
+    margin:auto;
+    width: 50%;
+    height: auto;
+  }
 
   #home {
     margin-top: 7rem;
@@ -430,6 +446,23 @@ footer p:hover {
     width: 11rem;
     height: 11rem;
     margin-left: 3rem;
+  }
+
+  .container-home {
+    width: 90%;
+    height: auto;
+    display: block;
+    padding: 2rem;
+  }
+
+  .container--narrow {
+    margin-left: 0;
+    width: 50%;
+    height: auto;
+  }
+  .container--narrow img {
+    width: 100%;
+    height: auto;
   }
 
   #about .left img {
