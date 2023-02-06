@@ -14,7 +14,7 @@ body {
     rgba(128, 0, 0, 0.8295693277310925) 0%,
     rgba(34, 193, 195, 0.577468487394958) 100%
   );
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Neucha", cursive;
 }
 
 html {
@@ -132,13 +132,19 @@ section {
   font-family: "Splash", cursive;
 }
 
+p::first-letter {
+  margin-left: 2rem;
+}
+
+button {
+  font-family: "Neucha", cursive;
+}
 /*/////////////////////*/
 /*   STYLING BUTTON   */
 /*/////////////////////*/
 
 .btn {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 14px;
+  font-size: 1.2rem;
   color: orange;
   font-weight: bold;
   letter-spacing: 2px;
@@ -250,7 +256,7 @@ form {
 }
 
 label {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   align-self: flex-start;
   margin-bottom: 0.5rem;
 }
